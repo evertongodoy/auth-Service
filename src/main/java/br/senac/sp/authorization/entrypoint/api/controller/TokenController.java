@@ -36,7 +36,7 @@ public class TokenController {
     }
 
     @GetMapping("/validate")
-    public ResponseEntity<String> validateToken(@RequestHeader("token") String token) {
+    public ResponseEntity<String> validateToken(@RequestHeader(name = "token") String token) {
         tokenUseCase.validate(TokenMapper.INSTANCE.toTokenDomain(token));
         return ResponseEntity.ok("ok");
     }

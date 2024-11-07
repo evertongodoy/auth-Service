@@ -8,4 +8,8 @@ public class TokenDomain {
         return token;
     }
 
+    public TokenDomain setToken(String token) {
+        this.token = token;
+        return this;
+    }
 }
